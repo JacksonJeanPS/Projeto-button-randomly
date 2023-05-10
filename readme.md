@@ -4,7 +4,7 @@ Este é um projeto simples que consiste em um botão que, ao ser clicado, gera u
 
 ## Como executar
 
-Para executar o projeto, basta abrir o arquivo `index.html` em um navegador web. Ao clicar no botão "Mudar cor", a cor de fundo da página será alterada aleatoriamente.
+Para executar o projeto, basta abrir o arquivo `index.html` em um navegador web. Ao tentar clicar no botão "Não", ele será alterada aleatoriamente para um novo local e não vai ter opção a não ser em clicar em "Sim".
 
 ## Tecnologias utilizadas
 
