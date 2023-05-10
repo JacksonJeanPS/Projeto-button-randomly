@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/0/827.png" type="image/x-icon">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #7d2ae8;
+        }
+
+        .wrapper {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            background: #fff;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        i {
+            font-size: 7.5em;
+            color: #7d2ae8;
+            border: 5px solid transparent;
+            outline: 3px solid #7d2ae8;
+            border-radius: 50%;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #7d2ae8;
+            margin: 15px 0;
+        }
+
+        .btn-group {
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        button {
+            position: absolute;
+            width: 150px;
+            height: inherit;
+            font-size: 1.2em;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 30px;
+            border: 2px solid #7d2ae8;
+            outline: none;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        button:nth-child(1) {
+            margin-left: -200px;
+            background: #7d2ae8;
+        }
+
+        button:nth-child(2) {
+            margin-right: -200px;
+            color: #7d2ae8;
+        }
+
+    </style>
+    <title>Importante</title>
+</head>
+<body>
+    <div class="wrapper">
+        <i class="fa-solid fa-circle-question"></i>
+        <h2 class="question">Aceita namorar comigo?</h2>
+        <div id="btnGroup"class="btn-group">
+            <button class="yes-btn" type="button" onclick="ocultarBtnGroup()">Sim</button>
+            <button class="no-btn">Não</button>
+        </div>
+    </div>
+    <script>
+            const wrapper = document.querySelector(".wrapper");
+            const question = document.querySelector(".question");
+            const btnGroup = document.querySelector("btnGroup");
+            const yesBtn = document.querySelector(".yes-btn");
+            const noBtn = document.querySelector(".no-btn");
+
+            const wrapperReact = wrapper.getBoundingClientRect();
+            const noBtnReact = noBtn.getBoundingClientRect();
+
+            yesBtn.addEventListener("click", () => {
+                question.innerHTML = "Fechou, então bora!";
+            });
+
+            function ocultarBtnGroup() {
+                document.querySelector("#btnGroup").style.display = "none";
+            }
+
+            noBtn.addEventListener("mouseover", () => {
+                const i =
+                    Math.floor(Math.random() * (wrapperReact.width - noBtnReact.width)) + 1;
+                const j =
+                    Math.floor(Math.random() * (wrapperReact.height - noBtnReact.height)) +
+                    1;
+
+                noBtn.style.left = i + "px";
+                noBtn.style.top = j + "px";
+            });
+    </script>
+</body>
+
+</html>
