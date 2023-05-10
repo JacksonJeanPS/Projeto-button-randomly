@@ -1,6 +1,6 @@
 # Projeto Button Randomly
 
-Este é um projeto simples que consiste em um botão que, ao ser clicado, gera uma cor de fundo aleatória para a página. O objetivo deste projeto é demonstrar o uso de JavaScript para manipular o DOM e criar eventos de clique.
+Este é um projeto simples que consiste em um botão que, ao ser clicado, se move do local inicial de forma aleatória dentro da página. O objetivo deste projeto é demonstrar o uso de JavaScript para manipular o DOM e criar eventos de clique.
 
 ## Como executar
 
